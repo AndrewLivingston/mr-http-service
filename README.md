@@ -37,3 +37,10 @@ it makes the occasionally inconsistent slide code consistent.
 | [38:46](https://youtu.be/rWBSMsLG8po?t=38m46s) | integration vs. unit tests                                                                                 | [server_test.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server_test.go#L52-L64)       |
 | [40:13](https://youtu.be/rWBSMsLG8po?t=40m13s) | e2e tests                                                                                                  | [server_test.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server_test.go#L66-L79)       |
 | [41:15](https://youtu.be/rWBSMsLG8po?t=41m15s) | testing middleware                                                                                         | [server_test.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server_test.go#L87-L115)      |
+
+## Note
+
+While the code compiles, the tests panic. The stubs compile but in many cases
+are not valid due to nil pointer dereferencing. This is intentional, since it
+makes the stubs as minimal as possible. My goal was to make them as close to,
+e.g., function signatures, as the compiler would let me.
