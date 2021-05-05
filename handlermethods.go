@@ -84,8 +84,8 @@ func (s *server) handleTemplate(files ...string) http.HandlerFunc {
 		init.Do(func() {
 			// setup only happens the handler is first called
 			tpl, tplerr = template.ParseFiles(files...) // expensive
-			// if handler never called, parsing is never done
-			// ...not sure why this wouldn't be true anyway
+			// if handler never called, parsing is never done (if done in
+			// handleTemplate, would definitely run once)
 		})
 		if tplerr != nil {
 			http.Error(w, tplerr.Error(), http.StatusInternalServerError)
