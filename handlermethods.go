@@ -33,7 +33,7 @@ func (s *server) handleAuthLogin() (h http.HandlerFunc)  { return h }
 func (s *server) handleAuthLogout() (h http.HandlerFunc) { return h }
 
 // ---
-// handler method arguments &
+// handler method arguments
 
 // arguments for handler-specific dependencies:
 func (s *server) handleGreeting(format string) http.HandlerFunc {
