@@ -22,7 +22,7 @@ it makes the somewhat disconnected and incompatible slide code consistent.
 | [11:24](https://youtu.be/rWBSMsLG8po?t=11m24s)  | server constructor | [server.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server.go#L15-L25)                                            |
 | [12:57](https://youtu.be/rWBSMsLG8po?t=12m57s)  | server as http.Handler | [server.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server.go#L27-L35)                                 |
 | [14:11](https://youtu.be/rWBSMsLG8po?t=14m11s)  | routes file | [routes.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/routes.go#L5-L14)                                            |
-| [15:18](https://youtu.be/rWBSMsLG8po?t=15m18s)  | handlers as server methods | [handlermethods.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/handlermethods.go#L11-33)                     |
+| [15:18](https://youtu.be/rWBSMsLG8po?t=15m18s)  | handlers as server methods | [handlermethods.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/handlermethods.go#L11-L33)                     |
 | [17:03](https://youtu.be/rWBSMsLG8po?t=17m3s) | handler-specific setup | [handlermethods.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/handlermethods.go#L18-L25)                         |
 | [18:08](https://youtu.be/rWBSMsLG8po?t=18m8s) | handler method arguments | [handlermethods.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/handlermethods.go#L35-L54)                       |
 | [19:39](https://youtu.be/rWBSMsLG8po?t=19m39s) | multiple server types | [server.go](https://github.com/AndrewLivingston/mr-http-service/blob/main/server.go#L37-L52)                                  |
