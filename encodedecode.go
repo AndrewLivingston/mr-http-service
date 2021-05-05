@@ -7,7 +7,6 @@ import (
 
 // ---
 // some common (premature?) abstractions
-// https://youtu.be/rWBSMsLG8po?t=1508
 
 // always taking ResponseWriter and Request future-proofs these
 
@@ -31,7 +30,7 @@ func (s *server) respond(
 }
 
 // decode should also start as simple as possible. Mat admits this abstraction
-// is unpopular
+// is unpopular with a colleague
 func (s *server) decode(w http.ResponseWriter, r *http.Request, v interface{}) error {
 	return json.NewDecoder(r.Body).Decode(v)
 }

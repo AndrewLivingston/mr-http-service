@@ -9,23 +9,11 @@ import (
 )
 
 // ---
-// handlers as server methods
-// https://youtu.be/rWBSMsLG8po?t=913
+// handlers as server methods &
+// handler-specific setup
 
 // Route handlers as methods on server give access to server's dependencies.
 // The downside is that sharing of common dependencies can lead to data races.
-
-// name handlers to play nicely with alphabetical docs & autocomplete:
-func (s *server) handleTasksCreate() (h http.HandlerFunc) { return h }
-func (s *server) handleTasksDone() (h http.HandlerFunc)   { return h }
-func (s *server) handleTasksGet() (h http.HandlerFunc)    { return h }
-
-func (s *server) handleAuthLogin() (h http.HandlerFunc)  { return h }
-func (s *server) handleAuthLogout() (h http.HandlerFunc) { return h }
-
-// ---
-// handler-specific setup
-// https://youtu.be/rWBSMsLG8po?t=1019:
 
 // handleSomething decorator returns a HandlerFunc closure to allow
 // handler-specific setup
@@ -36,9 +24,16 @@ func (s *server) handleSomething() http.HandlerFunc {
 	}
 }
 
+// name handlers to play nicely with alphabetical docs & autocomplete:
+func (s *server) handleTasksCreate() (h http.HandlerFunc) { return h }
+func (s *server) handleTasksDone() (h http.HandlerFunc)   { return h }
+func (s *server) handleTasksGet() (h http.HandlerFunc)    { return h }
+
+func (s *server) handleAuthLogin() (h http.HandlerFunc)  { return h }
+func (s *server) handleAuthLogout() (h http.HandlerFunc) { return h }
+
 // ---
-// handler method arguments
-// https://youtu.be/rWBSMsLG8po?t=1080
+// handler method arguments &
 
 // arguments for handler-specific dependencies:
 func (s *server) handleGreeting(format string) http.HandlerFunc {
@@ -60,7 +55,6 @@ func handleSendMagicLinkEmail(e EmailSender) (h http.HandlerFunc)     { return h
 
 // ---
 // inner types
-// https://youtu.be/rWBSMsLG8po?t=1672
 
 func (s *server) handleGreet() (h http.HandlerFunc) {
 	// declaring types inside functions:
@@ -79,7 +73,6 @@ func (s *server) handleGreet() (h http.HandlerFunc) {
 
 // ---
 // lazy setup with sync.Once
-// https://youtu.be/rWBSMsLG8po?t=1753
 
 func (s *server) handleTemplate(files ...string) http.HandlerFunc {
 	var (

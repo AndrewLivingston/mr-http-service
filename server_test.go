@@ -12,7 +12,6 @@ import (
 
 // ---
 // testing servers
-// https://youtu.be/rWBSMsLG8po?t=2011
 
 func TestHandleAbout(t *testing.T) {
 	is := is.New(t)
@@ -29,7 +28,6 @@ func TestHandleAbout(t *testing.T) {
 
 // ---
 // testing inner types
-// https://youtu.be/rWBSMsLG8po?t=2229
 
 func TestGreet(t *testing.T) {
 	is := is.New(t)
@@ -53,7 +51,6 @@ func TestGreet(t *testing.T) {
 
 // ---
 // integration vs. unit tests
-// https://youtu.be/rWBSMsLG8po?t=2324
 
 func twoOrThreeWaysToTestServer(srv *server, w http.ResponseWriter, r *http.Request) {
 
@@ -68,7 +65,6 @@ func twoOrThreeWaysToTestServer(srv *server, w http.ResponseWriter, r *http.Requ
 
 // ---
 // e2e tests
-// https://youtu.be/rWBSMsLG8po?t=2408
 
 // from https://pkg.go.dev/net/http/httptest?utm_source=gopls#Server
 // An httptest.Server is an HTTP server listening on a system-chosen port on the
@@ -90,7 +86,6 @@ func TestTips(t *testing.T) {
 
 // ---
 // testing middleware
-// https://youtu.be/rWBSMsLG8po?t=2474
 
 func TestAdminOnly(t *testing.T) {
 	var (

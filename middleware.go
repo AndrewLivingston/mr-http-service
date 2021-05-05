@@ -4,7 +4,6 @@ import "net/http"
 
 // ---
 // middleware
-// https://youtu.be/rWBSMsLG8po?t=1314
 
 // adminOnly is a decorator that simply passes along a HandlerFunc, first
 // ensuring the user has admin access

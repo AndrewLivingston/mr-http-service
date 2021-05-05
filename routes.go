@@ -4,7 +4,6 @@ import "net/http"
 
 // ---
 // routes file
-// https://youtu.be/rWBSMsLG8po?t=842
 
 // routes in routes.go is a convenient one-stop shop for urls during
 // maintenance

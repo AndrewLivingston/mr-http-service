@@ -4,7 +4,6 @@ import "net/http"
 
 // ---
 // server type
-// https://youtu.be/rWBSMsLG8po?t=604
 
 type server struct {
 	// eliminates global variables
@@ -13,18 +12,20 @@ type server struct {
 	email  EmailSender
 }
 
+// ---
+// server constructor
+
 // newServer is inconsistent with example in main.go. Matt prefers not to have
 // constructors, but says he always seems to end up with one for servers
 func newServer() *server {
 	s := &server{} // leaves dependencies as nil (could be passed as
-	// arguments if not many)
+	// arguments if not many, but better to explicily assign)
 	s.routes()
 	return s
 }
 
 // ---
 // server as http.Handler
-// https://youtu.be/rWBSMsLG8po?t=772
 
 // ServeHTTP makes server an http.Handler. (Recall this method is intended to
 // panic instead of returning an error.)
@@ -35,7 +36,6 @@ func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 // ---
 // multiple server types
-// https://youtu.be/rWBSMsLG8po?t=1171
 
 // a pattern for large apps; can have different dependencies
 

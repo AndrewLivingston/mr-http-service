@@ -10,7 +10,6 @@ import (
 
 // ---
 // main and run
-// https://youtu.be/rWBSMsLG8po?t=552
 
 func main() {
 	if err := run(); err != nil {
