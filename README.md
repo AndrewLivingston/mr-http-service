@@ -9,7 +9,7 @@ private.
 
 The fact that this code compiles is not that important since it does nothing interesting. But the
 `ANCILLARY STUB` sections do show what types might satisfy some of Mat's slide code, and in addition
-it makes the somewhat disconnected and incompatible slide code consistent.
+it makes the occasionally inconsistent slide code consistent.
 
 
 ## ToC/Timecodes
